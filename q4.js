@@ -1,18 +1,14 @@
 function adjacentElementsProduct(inputArray) {
     var arr = inputArray;
-    var x = 0;
-    var y = 0;
+    var res= arr[0]*arr[1];
     var p = Number.MIN_SAFE_INTEGER;
     for (var i = 0; i < arr.length; i++) {
-      x = arr[i];
-      y = arr[i + 1];
-      if (x * y > p) {
-        p = x * y;
-        console.log(x,y);
-        console.log(p);
+      if (arr[i]*arr[i+1] > p) {
+       res=arr[i]*arr[i+1];
       };
     };
-    return p;
+    console.log(res);
+    return res;
   };
   
   (adjacentElementsProduct([3,6,-2,-5,7,3]));
